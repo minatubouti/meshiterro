@@ -6,6 +6,9 @@ class User < ApplicationRecord
        has_many :post_images, dependent: :destroy
        #UserモデルとPostCommentモデルを関連付ける
        has_many :post_comments, dependent: :destroy
+       #Userモデルに関連付けを追加する
+       has_many :favorites, dependent: :destroy
+       
        
        has_one_attached :profile_image
        
